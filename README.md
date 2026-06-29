@@ -5,3 +5,5 @@ Aplicación Flask con análisis automático de seguridad usando Bandit y GitHub 
 ## Descripción
 Este proyecto implementa un pipeline CI/CD que detecta vulnerabilidades
 automáticamente en cada push usando análisis estático con Bandit.
+## Actualización - Actividad 3
+Se ejecuta el pipeline automático para detectar vulnerabilidades.
