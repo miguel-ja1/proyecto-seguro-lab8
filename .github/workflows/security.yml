@@ -21,11 +21,14 @@ jobs:
 
       - name: Ejecutar analisis de seguridad
         run: |
-          bandit -r . --exit-zero -f json -o reporte_seguridad.json
           bandit -r . --exit-zero
+
+      - name: Generar reporte de seguridad
+        run: |
+          bandit -r . -f txt -o reporte_bandit.txt
 
       - name: Subir reporte como artefacto
         uses: actions/upload-artifact@v4
         with:
           name: reporte-seguridad
-          path: reporte_seguridad.json
+          path: reporte_bandit.txt
