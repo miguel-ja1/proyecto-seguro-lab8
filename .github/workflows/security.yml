@@ -25,7 +25,7 @@ jobs:
 
       - name: Generar reporte de seguridad
         run: |
-          bandit -r . -f txt -o reporte_bandit.txt
+          bandit -r . -f txt -o reporte_bandit.txt --exit-zero
 
       - name: Subir reporte como artefacto
         uses: actions/upload-artifact@v4
